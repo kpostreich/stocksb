@@ -25,8 +25,7 @@ public class Example {
   @RequestMapping(value = "/stockquotesb/{stock}")
   public ResponseEntity<?> getStockQuote(@PathVariable("stock") String stock) {
        
-        
-        return new ResponseEntity<String>("Symbol: " + stock + " Price: " + TEST_PRICE, HttpStatus.OK);
-    }
+        return new ResponseEntity<String>("{\"Symbol\":\"" + stock + "\",\"price\":\"" + TEST_PRICE +"\"}", HttpStatus.OK);
+  }
 
 }
